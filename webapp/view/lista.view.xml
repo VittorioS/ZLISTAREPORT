@@ -1,0 +1,30 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="zlistareport.controller.lista">
+	<Page title="Title">
+		<content>
+			<Table noDataText="Drop column list items here and columns in the area above" id="tabella" items="{report>/reports}">
+				<items>
+					<ColumnListItem id="__item1">
+						<cells>
+							<Text text="{report>nome}" id="__text7"/></cells>
+					</ColumnListItem>
+				</items>
+				<columns>
+					<Column id="__column2">
+						<header>
+							<Label text="{i18n>colonna1}" id="__label2"/>
+						</header>
+					</Column>
+				</columns>
+			<headerToolbar>
+			    <Toolbar width="100%" id="__toolbar1">
+			        <content>
+			            <ToolbarSpacer xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" id="__spacer0"/>
+			            <Button id="__button0" icon="sap-icon://save" width="50px" press="onPressSalva"/>
+			            <sap.ui.unified:FileUploader xmlns:sap.ui.unified="sap.ui.unified" id="__uploader0" buttonOnly="true" iconOnly="true" icon="sap-icon://open-folder" uploadComplete="onUploadComplete"/>
+			        </content>
+			    </Toolbar>
+			</headerToolbar>
+			</Table>
+		</content>
+	</Page>
+</mvc:View>
